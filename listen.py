@@ -11,7 +11,7 @@ def mytime():
 while 1:
     time.sleep(5)
     m=mytime()
-    java_pid_nu=os.system('ps aux | grep java | grep -v grep | wc -l')
+    java_pid_nu=os.popen('ps aux | grep java | grep -v grep | wc -l')
     if java_pid_nu==1:
         java_sub_process=('ps aux | grep java | grep -v grep |awk \'{print $2}\' | xargs pmap -x | wc -l')
         if java_sub_process>1000:
