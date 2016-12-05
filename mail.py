@@ -18,10 +18,10 @@ if sys.getdefaultencoding() != default_encoding:
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
-def pysendmail(sender,receivers,question,stat,mail_host,mail_name,mail_pass):
-	mail_host= mail_host #设置服务器
-	mail_user=mail_name    #用户名
-	mail_pass=mail_pass   #口令
+def pysendmail(sender,receivers,question,stat):
+	mail_host= 'smtp.mxhichina.com' #设置服务器
+	mail_user='cy.chen@networkgrand.com'    #用户名
+	mail_pass='123qwe!@#QWE'   #口令
 	mail_template_file='./template/report.txt'
 
 

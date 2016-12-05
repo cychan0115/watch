@@ -15,8 +15,8 @@ while 1:
     if java_pid_nu==1:
         java_sub_process=('ps aux | grep java | grep -v grep |awk \'{print $2}\' | xargs pmap -x | wc -l')
         if java_sub_process>1000:
-            mail.pysendmail('cy.chen@networkgrand.com','cy.chen@networkgrand.com','java_sub_process','异常','smtp.mxhichina.com','cy.chen@networkgrand.com','123qwe!@#QWE')
+            mail.pysendmail('cy.chen@networkgrand.com','cy.chen@networkgrand.com','java_sub_process','异常')
         else:
-            mail.pysendmail('cy.chen@networkgrand.com','cy.chen@networkgrand.com','java_sub_process','正常','smtp.mxhichina.com','cy.chen@networkgrand.com','123qwe!@#QWE')
+            mail.pysendmail('cy.chen@networkgrand.com','cy.chen@networkgrand.com','java_sub_process','正常')
     else:
-        mail.pysendmail('cy.chen@networkgrand.com','cy.chen@networkgrand.com','java_process','异常','smtp.mxhichina.com','cy.chen@networkgrand.com','123qwe!@#QWE')
+        mail.pysendmail('cy.chen@networkgrand.com','cy.chen@networkgrand.com','java_process','异常')
